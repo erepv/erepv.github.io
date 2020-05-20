@@ -701,4 +701,9 @@ p.work-time{
     }
     .stages-inner{
         width: 90%;
-}}
+    }
+    /*bot*/
+    .footer h3 {
+        font-size: 1.3rem;
+    }
+}
