@@ -645,13 +645,12 @@ p.work-time{
                              'no4   no4   item9 item9'
     }
     .grid-item{
-        z-index: 5;
+        z-index: 3;
     }
     .item-hover{
         filter: grayscale(20%);
         opacity: .95;
     }
-
     .item6{
         font-size: .8rem;
         letter-spacing: 6px;
