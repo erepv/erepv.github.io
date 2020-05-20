@@ -526,10 +526,17 @@ p.work-time{
         margin-top: 30px;
         width: 100%;
     }
-    .price1, .price2, .price3{
+    .price h3{
+        cursor: pointer;
+    }
+    .price1{
         display: block;
     }
+    .price2, .price3{
+        display: none;
+    }
     .dropdownI{
+        display: inline-block;
         font-family: "Font Awesome 5 Free";
         font-style: normal;
         font-weight: 900;
@@ -537,10 +544,18 @@ p.work-time{
         transition: .3s;
     }
     .dropdownI:after{
-        display: inline-block;
         content: '\f078';
         box-sizing: border-box;
+        transition: transform .3s ease;
+    }
+    .i1{
         transform: rotate(180deg);
+    }
+    .i2{
+        transform: rotate(0deg);
+    }
+    .i3{
+        transform: rotate(0deg);
     }
     .stages > div{
         padding: 0 30px; 
