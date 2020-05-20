@@ -181,7 +181,7 @@ p.work-time{
 .item-hover:hover{
     transform: scale(1.5);
     filter: grayscale(0%);
-    z-index: 2;
+    z-index: 10;
 }
 .item1{
     grid-area: item1;
@@ -649,7 +649,7 @@ p.work-time{
     }
     .item-hover{
         filter: grayscale(20%);
-        opacity: .93;
+        opacity: .95;
     }
 
     .item6{
@@ -665,7 +665,7 @@ p.work-time{
     }
     .pic3{
         top: 210px;
-        left: 230px;
+        left: 180px;
         animation-play-state: paused;
     }
     .pic4{
@@ -675,6 +675,9 @@ p.work-time{
         top: 750px;
         animation-play-state: paused;
         transform: rotateZ(5deg);
+    }
+    .pic5:hover{
+        animation: none;
     }
     /*prices*/
     .prices{
