@@ -85,7 +85,7 @@ mark:hover{
 p.work-time{
     color: var(--orange);
 }
-.telephone h2{
+.telephone a{
     font-size: 1.5rem;
     font-weight: 900;
     letter-spacing: 1px;
@@ -392,9 +392,6 @@ p.work-time{
     flex-wrap: wrap;
     margin: 40px 150px;   
 }
-.stages-inner{
-    position: relative;
-}
 .imgNum{
     display: inline-block;
     position: relative;
@@ -420,7 +417,7 @@ p.work-time{
 }
 /*bottom*/
 .footer{
-    background-color: rgb(54, 48, 43);
+    background-color: #36302b;
     color: white;
     padding: 80px 30px;
 }
@@ -441,9 +438,14 @@ p.work-time{
     width: 48%;
     text-align: center;
 }
-.footer-phone h2{
+.footer-phone img{
+    margin-top: 20px;
+}
+.footer-phone a{
+    display: block;
+    color: #fff;
     margin-left: 0;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 .footer-icon{
     color: var(--orange);
@@ -466,9 +468,7 @@ p.work-time{
 /* MEDIA queries
 ================== */
 @media screen and (max-width: 1500px){
-    .first h2{
-        margin: 20px auto 23px;
-    }
+    .first h2{margin: 20px auto 23px;}
     /*job types picture*/
     .pic4{
         top: 110px;
@@ -480,11 +480,8 @@ p.work-time{
 }}
 @media screen and (max-width: 1270px){
     /*job types picture*/
-    .pic4{
-        right: 80px;
-    }
-    .pic5{
-        right: -87px;
+    .pic4{right: 80px;}
+    .pic5{right: -87px;
 }}
 @media screen and (max-width: 1180px){
     /* HEADER */
@@ -526,10 +523,13 @@ p.work-time{
         margin-top: 30px;
         width: 100%;
     }
-    .price1, .price2, .price3{
-        display: block;
+    .price h3{
+        cursor: pointer;
     }
+    .price1{display: block;}
+    .price2, .price3{display: none;}
     .dropdownI{
+        display: inline-block;
         font-family: "Font Awesome 5 Free";
         font-style: normal;
         font-weight: 900;
@@ -537,14 +537,14 @@ p.work-time{
         transition: .3s;
     }
     .dropdownI:after{
-        display: inline-block;
         content: '\f078';
         box-sizing: border-box;
-        transform: rotate(180deg);
+        transition: transform .3s ease;
     }
-    .stages > div{
-        padding: 0 30px; 
-    }
+    .i1{transform: rotate(180deg);}
+    .i2{transform: rotate(0deg);}
+    .i3{transform: rotate(0deg);}
+    .stages > div{padding: 0 30px; }
     .stages-inner{
         width: 50%;
 }}
@@ -553,6 +553,9 @@ p.work-time{
         margin: 40px 80px;   
     }
     /*footer*/
+    .footer-inner{
+        margin: 60px 10px 40px;
+    }
     .footer-inner>div{
         width: 100%;
     }
@@ -565,7 +568,7 @@ p.work-time{
         padding: 5px 7px;
 }}
 @media screen and (max-width: 630px){
-    .telephone h2{
+    .telephone a{
         font-size: 1.5rem;
         font-weight: 900;
         letter-spacing: 1px;
@@ -598,7 +601,7 @@ p.work-time{
         margin-left: 3px;
         font-size: .6rem;
     }
-    .telephone h2{
+    .telephone a{
         font-size: 1rem;
         font-weight: 700;
         letter-spacing: 0px;
@@ -629,7 +632,6 @@ p.work-time{
         padding: 5px 0;
     }
     .types-inner{
-        display: grid;
         grid-template-columns: 25% 25% 25% 25%;
         grid-template-rows: 100px 100px 70px 150px 180px 50px 100px 100px 100px 100px 50px;
         grid-template-areas: 'item1 item1 item2 item2'
@@ -645,13 +647,12 @@ p.work-time{
                              'no4   no4   item9 item9'
     }
     .grid-item{
-        z-index: 5;
+        z-index: 3;
     }
     .item-hover{
         filter: grayscale(20%);
         opacity: .95;
     }
-
     .item6{
         font-size: .8rem;
         letter-spacing: 6px;
@@ -665,7 +666,7 @@ p.work-time{
     }
     .pic3{
         top: 210px;
-        left: 180px;
+        left: 130px;
         animation-play-state: paused;
     }
     .pic4{
@@ -702,4 +703,12 @@ p.work-time{
     }
     .stages-inner{
         width: 90%;
-}}
+    }
+    /*bot*/
+    .footer h3 {
+        font-size: 1.3rem;
+    }
+    .footer-phone a{
+        font-size: 1.3rem;
+    }
+}
